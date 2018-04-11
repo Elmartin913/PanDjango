@@ -7,3 +7,8 @@ from django.template.response import TemplateResponse
 class StartView(View):
     def get(self, request):
         return TemplateResponse(request, 'index.html')
+
+
+class ContactView(View):
+    def get(self,request):
+        return TemplateResponse(request, 'contact.html')

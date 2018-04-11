@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from website.views import StartView
+from website.views import StartView, ContactView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', StartView.as_view(), name='index'),
+    path('contact', ContactView.as_view(), name='contact'),
 ]
