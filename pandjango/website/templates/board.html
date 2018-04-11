@@ -1,0 +1,39 @@
+{% load static %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Boards</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item active">Boards</li>
+      </ol>
+      <table class="table">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Nadawca</th>
+              <th>Tytuł</th>
+            <th>Wiadomość</th>
+            <th>Telefon</th>
+            <th>Email</th>
+              <th>Wysłana</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for contact in contacts %}
+            <tr>
+              <td>{{ contact.name }}</td>
+                <td>{{ contact.subject }}</td>
+              <td>{{ contact.message }}</td>
+              <td >{{ contact.mobile }}</td>
+              <td>{{ contact.email }}</td>
+                <td>{{ contact.time_add }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

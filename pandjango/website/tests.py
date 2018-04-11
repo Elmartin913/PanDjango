@@ -1,6 +1,8 @@
 from django.test import TestCase
 from django.urls import reverse, resolve
-from .views import StartView, ContactView
+from .views import (
+    StartView, ContactView, BoardView
+)
 
 # Create your tests here.
 
@@ -26,3 +28,15 @@ class ConactTests(TestCase):
     def test_contact_url_resolves_contact_view(self):
         view = resolve('/contact')
         self.assertEquals(view.func.__name__, ContactView.as_view().__name__ )
+
+
+class BoardTests(TestCase):
+    def test_board_view_status_code(self):
+        url = reverse('board')
+        response = self.client.get(url)
+        self.assertEquals(response.status_code, 200)
+
+
+    def test_contact_url_resolves_contact_view(self):
+        view = resolve('/board')
+        self.assertEquals(view.func.__name__, BoardView.as_view().__name__ )
