@@ -18,18 +18,16 @@
             <th>Wiadomość</th>
             <th>Telefon</th>
             <th>Email</th>
-              <th>Wysłana</th>
           </tr>
         </thead>
         <tbody>
           {% for contact in contacts %}
             <tr>
-              <td>{{ contact.name }}</td>
+              <td>{{ contact.name }}<small class="text-muted d-block">{{ contact.time_add }}</small></td>
                 <td>{{ contact.subject }}</td>
               <td>{{ contact.message }}</td>
               <td >{{ contact.mobile }}</td>
               <td>{{ contact.email }}</td>
-                <td>{{ contact.time_add }}</td>
             </tr>
           {% endfor %}
         </tbody>

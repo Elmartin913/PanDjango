@@ -169,7 +169,6 @@ nav {
 .skill h3 {
     text-transform: capitalize;
     margin: 10px 0;
-
 }
 
 .skill p {
@@ -215,13 +214,13 @@ nav {
     }
     .skill {
         flex: 0 0 calc(50% - 1em);
-        text-align: left;
+        text-align: center;
     }
 }
 
 @media screen and (min-width: 992px) {
     .skill {
-        flex: 0 0 calc(50% - 1em);
+        flex: 0 0 calc(30% - 1em);
     }
 }
 
@@ -263,4 +262,44 @@ nav {
     color: #4717f6;
     text-align: center;
 }
+/* form */
+form input,
+form textarea{
+    display: block;
+    width: 90%;
+    margin: 1px 0;
+    font-size: 17px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #a239ca;
+}
 
+form input::placeholder,
+form textarea::placeholder {
+    color: #a239ca;
+}
+
+button {
+    text-decoration: none;
+    text-transform: capitalize;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px 12px;
+    color: #e7dfdd;
+    font-style: italic;
+    border: 3px solid #0e0b16;
+    border-radius: 25px;
+    background: #a239ca;
+    transition: color 1s ease, background 1s ease, border 1s ease;
+}
+
+button:hover {
+    color: #e7dfdd;
+    background: #4717f6;
+    border: 3px solid #0e0b16;
+}
+label{
+    visibility: hidden;
+}

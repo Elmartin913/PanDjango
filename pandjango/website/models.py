@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
 class Board(models.Model):
     name = models.CharField(max_length=30, unique=True)
     description = models.CharField(max_length=100)
@@ -37,7 +38,6 @@ class Contact(models.Model):
     email = models.EmailField()
     mobile = models.IntegerField()
     time_add = models.TimeField(auto_now_add=True)
-
 
     def __str__(self):
         return self.name
