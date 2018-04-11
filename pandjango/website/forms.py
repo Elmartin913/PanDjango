@@ -26,7 +26,7 @@ class ContactForm(forms.ModelForm):
         required=True,
     )
     mobile = forms.CharField(
-        widget=forms.TextInput(attrs={'rows': 1, 'placeholder': 'Telefon'}),
+        widget=forms.TextInput(attrs={'rows': 1, 'type': 'number', 'placeholder': 'Telefon'}),
         max_length=32,
         required=False,
     )

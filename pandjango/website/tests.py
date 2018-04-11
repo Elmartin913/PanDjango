@@ -1,8 +1,12 @@
+import datetime
+
 from django.test import TestCase
 from django.urls import reverse, resolve
+
 from .views import (
     StartView, ContactView, BoardView
 )
+from .models import Contact
 
 # Create your tests here.
 
@@ -40,3 +44,20 @@ class BoardTests(TestCase):
     def test_contact_url_resolves_contact_view(self):
         view = resolve('/board')
         self.assertEquals(view.func.__name__, BoardView.as_view().__name__ )
+
+
+class NewContactTests(TestCase):
+    def setUp(self):
+        Contact.objects.create(
+            name = 'Paweł',
+            subject = 'Storzenie strony internetowej',
+            message = 'Chcę stworzyć nową stronę internetową firmy na urządzenia mobile',
+            email = 'pawel@o2.pl',
+            mobile = '456123654',
+            time_add = datetime.datetime.now(),
+        )
+
+    def test_csrf(self):
+        url = reverse('contact')
+        response = self.client.get(url)
+        self.assertContains(response, 'csrfmiddlewaretoken')
