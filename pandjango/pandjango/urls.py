@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from website.views import StartView, ContactView
+from website.views import StartView, ContactView, BoardView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', StartView.as_view(), name='index'),
     path('contact', ContactView.as_view(), name='contact'),
+    path('board', BoardView.as_view(), name='board'),
 ]

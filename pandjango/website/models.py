@@ -7,6 +7,9 @@ class Board(models.Model):
     name = models.CharField(max_length=30, unique=True)
     description = models.CharField(max_length=100)
 
+    def __str__(self):
+        return self.name
+
 
 class Topic(models.Model):
     subject = models.CharField(max_length=255)
@@ -14,7 +17,10 @@ class Topic(models.Model):
     board = models.ForeignKey(Board, related_name='topics', on_delete=models.CASCADE)
     starter = models.ForeignKey(User, related_name='topics', on_delete=models.CASCADE)
 
-    
+    def __str__(self):
+        return self.subject
+
+
 class Post(models.Model):
     message = models.TextField(max_length=4000)
     topic = models.ForeignKey(Topic, related_name='posts', on_delete=models.CASCADE)
@@ -25,8 +31,13 @@ class Post(models.Model):
 
 
 class Contact(models.Model):
+    name = models.CharField(max_length=128, null=True)
     subject = models.CharField(max_length=255)
     message = models.TextField(max_length=4000)
     email = models.EmailField()
-    mobile = models.IntegerField(max_length=12)
+    mobile = models.IntegerField()
     time_add = models.TimeField(auto_now_add=True)
+
+
+    def __str__(self):
+        return self.name

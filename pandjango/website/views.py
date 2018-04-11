@@ -12,3 +12,6 @@ class StartView(View):
 class ContactView(View):
     def get(self,request):
         return TemplateResponse(request, 'contact.html')
+
+class BoardView(View):
+    pass
