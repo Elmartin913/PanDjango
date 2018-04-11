@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'twilio',
     'website',
 ]
 
@@ -121,3 +123,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'website/static/'
 STATIC_DIR = '/static/'
+
+
+# twilio
+
+TWILIO_ACCOUNT_SID = 'AC43fbfdaa41031ca347d0eea205ec405f'
+TWILIO_AUTH_TOKEN = '089adb7ec522910c5f36233ece851172'
