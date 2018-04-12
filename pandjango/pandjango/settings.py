@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'twilio',
     'website',
+    'accounts',
 ]
 
 MIDDLEWARE = [

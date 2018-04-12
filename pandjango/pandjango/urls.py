@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 from website.views import StartView, ContactView, BoardView
+from accounts.views import signup
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', StartView.as_view(), name='index'),
     path('contact', ContactView.as_view(), name='contact'),
     path('board', BoardView.as_view(), name='board'),
+    #acconts
+    path('signup', signup, name='signup'),
 ]

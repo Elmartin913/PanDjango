@@ -52,7 +52,7 @@ class NewContactTests(TestCase):
             name = 'Paweł',
             subject = 'Storzenie strony internetowej',
             message = 'Chcę stworzyć nową stronę internetową firmy na urządzenia mobile',
-            email = 'pawel@o2.pl',
+            email = 'pawelo2.pl',
             mobile = '456123654',
             time_add = datetime.datetime.now(),
         )
@@ -61,3 +61,22 @@ class NewContactTests(TestCase):
         url = reverse('contact')
         response = self.client.get(url)
         self.assertContains(response, 'csrfmiddlewaretoken')
+
+    def test_new_contact_invalid_post_data_empty_fields(self):
+        '''
+        Invalid post data should not redirect
+        The expected behavior is to show the form again with validation errors
+        '''
+        url = reverse('contact')
+        data = {
+            'name': '',
+            'subject': '',
+            'message': '',
+            'email': '',
+            'mobile': '',
+            'time_add': '',
+
+        }
+        response = self.client.post(url, data)
+        self.assertEquals(response.status_code, 200)
+        self.assertFalse(Contact.objects.exists())

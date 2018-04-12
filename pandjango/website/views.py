@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 
 from django.views import View
 from django.template.response import TemplateResponse
@@ -21,25 +21,23 @@ class ContactView(View):
     def post(self, request):
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             mobile = form.cleaned_data['mobile']
 
             new_contact = Contact.objects.create(
-                subject=subject,
                 message=message,
                 name=name,
                 email=email,
                 mobile=mobile,
             )
 
-        return HttpResponse('Wiadomosc wysłana')
+        return HttpResponseRedirect('contact')
 
 
 
 class BoardView(View):
     def get(self, request):
-        contacts = Contact.objects.all()
+        contacts = Contact.objects.all().order_by('-id')
         return render(request, 'board.html', {'contacts': contacts})

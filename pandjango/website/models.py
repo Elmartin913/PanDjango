@@ -33,10 +33,10 @@ class Post(models.Model):
 
 class Contact(models.Model):
     name = models.CharField(max_length=128, null=True)
-    subject = models.CharField(max_length=255)
+    subject = models.CharField(max_length=255, blank=True)
     message = models.TextField(max_length=4000)
-    email = models.EmailField()
-    mobile = models.IntegerField()
+    email = models.EmailField(max_length=70,blank=True)
+    mobile = models.CharField(max_length=9, blank=True, null=True,default='000000000')
     time_add = models.TimeField(auto_now_add=True)
 
     def __str__(self):
