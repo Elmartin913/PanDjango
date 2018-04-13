@@ -32,12 +32,17 @@ class Post(models.Model):
 
 
 class Contact(models.Model):
-    name = models.CharField(max_length=128, null=True)
-    subject = models.CharField(max_length=255, blank=True)
-    message = models.TextField(max_length=4000)
-    email = models.EmailField(max_length=70,blank=True)
-    mobile = models.CharField(max_length=9, blank=True, null=True,default='000000000')
+    name = models.CharField(max_length=128, null=True, verbose_name='Nadawca')
+    subject = models.CharField(max_length=255, blank=True, verbose_name='Temat')
+    message = models.TextField(max_length=4000, verbose_name='Wiadomość')
+    email = models.EmailField(max_length=70,blank=True, verbose_name='Email')
+    mobile = models.CharField(max_length=9, blank=True, null=True,default='000000000', verbose_name='Telefon')
     time_add = models.TimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'Wiadomość'
+        verbose_name_plural = 'Wiadomości'
+
 
     def __str__(self):
         return self.name
