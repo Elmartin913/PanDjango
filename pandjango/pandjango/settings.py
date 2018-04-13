@@ -135,4 +135,5 @@ TWILIO_AUTH_TOKEN = '089adb7ec522910c5f36233ece851172'
 
 LOGIN_REDIRECT_URL = 'board'
 LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'login'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
