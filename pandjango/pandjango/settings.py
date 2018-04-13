@@ -37,8 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    # external app
+    'widget_tweaks',
     'twilio',
+    #my app
     'website',
     'accounts',
 ]
@@ -133,3 +135,4 @@ TWILIO_AUTH_TOKEN = '089adb7ec522910c5f36233ece851172'
 
 LOGIN_REDIRECT_URL = 'login'
 LOGOUT_REDIRECT_URL = 'logout'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
