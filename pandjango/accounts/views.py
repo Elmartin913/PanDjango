@@ -20,6 +20,7 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
+'''
 class LogoutView(View):
     def get(self, request):
         logout(request)
@@ -46,3 +47,4 @@ class LogInView(View):
                 return HttpResponseRedirect('board')
             else:
                 return HttpResponse('Niepoprawne dane do logowania')
+'''
