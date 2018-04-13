@@ -1,6 +1,5 @@
 from django.views import View
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect, HttpResponse
 
 from .forms import SignUpForm, LogInForm
@@ -19,6 +18,8 @@ def signup(request):
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+
 
 '''
 class LogoutView(View):

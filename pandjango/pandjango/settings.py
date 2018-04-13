@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     # external app
     'widget_tweaks',
     'twilio',
-    #my app
+    #my apps
     'website',
     'accounts',
+    'dossier',
 ]
 
 MIDDLEWARE = [
