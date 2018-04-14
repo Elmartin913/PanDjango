@@ -3,30 +3,22 @@ from django.shortcuts import render
 # Create your views here.
 
 def agency(request):
-    pass
+    return render(request, 'agency.html')
 
 
 def banana(request):
-    pass
+    return render(request, 'banana.html')
 
 
 def fast(request):
-    pass
-
-
-def flat(request):
-    pass
+    return render(request, 'fast.html')
 
 
 def funflat(request):
-    pass
+    return render(request, 'funflat.html')
 
 
 def stand(request):
-    pass
+    return render(request, 'stand.html')
 
-
-
-def agency(request):
-    pass
 

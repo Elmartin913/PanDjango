@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Gym - Personal Training</title>
-    <link href="css/jquery.bxslider.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link href="css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="{% static 'standard/css/jquery.bxslider.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="{% static 'standard/style.css' %}" />
+    <link href="{% static 'standard/css/font-awesome.min.css' %}" rel="stylesheet"/>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <link rel="stylesheet" href="css/animate.css" type="text/css">
-    <link rel="stylesheet" href="css/waypoints.css" type='text/css'>
-    <script src="js/jquery.waypoints.min.js" type='text/javascript'></script>
-    <script src="js/waypoints.js" type='text/javascript'></script>
+    <link rel="stylesheet" href="{% static 'standard/css/animate.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'standard/css/waypoints.css' %}" type='text/css'>
+    <script src="{% static 'standard/js/jquery.waypoints.min.js' %}" type='text/javascript'></script>
+    <script src="{% static 'standard/js/waypoints.js' %}" type='text/javascript'></script>
 
 </head>
 <body>
@@ -35,17 +36,17 @@
     </header>
 <!--- Start Slider -->
 <section class="jumbotron">
-        <script src="js/jquery.bxslider.min.js"></script><!--For Image Slider-->
+        <script src="{% static 'standard/js/jquery.bxslider.min.js' %}"></script><!--For Image Slider-->
 
         <!--- ADD IMAGE SLIDER HERE -->
 
         <div class="slide-wrap">
             <section class="slider">
                 <ul class="slider3">
-                    <li><img src="img/chest-fly.png" alt=""></li>
-                    <li><img src="img/push-ups.png" alt=""></li>
-                    <li><img src="img/inside-gym.png" alt=""></li>
-                    <li><img src="img/training.png" alt=""></li>
+                    <li><img src="{% static 'standard/img/chest-fly.png' %}" alt=""></li>
+                    <li><img src="{% static 'standard/img/push-ups.png' %}" alt=""></li>
+                    <li><img src="{% static 'standard/img/inside-gym.png' %}" alt=""></li>
+                    <li><img src="{% static 'standard/img/training.png' %}" alt=""></li>
                 </ul>
             </section>
         </div>
@@ -121,7 +122,7 @@
 <section class="os-animation" data-os-animation="fadeInLeft" date-os-animation-delay=".3s">
 
     <article>
-        <img src="img/gym-classes.png" alt="" class="circle-image">
+        <img src="{% static 'standard/img/gym-classes.png' %}" alt="" class="circle-image">
     </article>
 
 </section> <!-- end animation -->
@@ -146,7 +147,7 @@
 
     <section class="one-third">
         <h3>Ladies Section</h3>
-        <img src="img/ladies-gym.jpg" alt="">
+        <img src="{% static 'standard/img/ladies-gym.jpg' %}" alt="">
         <p>Included in our facility is a 'ladies only' section of the gym where woman can workout to themselves.</p>
     </section>
 </section><!-- end animation -->
@@ -154,7 +155,7 @@
 
     <section class="one-third">
         <h3>The gym floor</h3>
-        <img src="img/gym-floor.jpg" alt="">
+        <img src="{% static 'standard/img/gym-floor.jpg' %}" alt="">
         <p>Our gym floor is as spacious as they come, Enjoy scenic views from the cardio equipment on the third floor.</p>
     </section>
 
@@ -163,7 +164,7 @@
 
     <section class="one-third">
         <h3>Free weights</h3>
-        <img src="img/free-weights.jpg" alt="">
+        <img src="{% static 'standard/img/free-weights.jpg' %}" alt="">
         <p>Our free weights section has an extensive collection of dumbbells and Olympic plates for body building.</p>
     </section>
 </section><!-- end animation -->
@@ -183,10 +184,10 @@
             <section class="one-third" id=footer-third>
                 <h3>Social</h3><br>
                 <ul class="social">
-                    <li><a href="https://www.facebook.com/w3newbie" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://www.facebook.com/w3newbie" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                     <li><a href="https://www.facebook.com/w3newbie" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="https://www.facebook.com/w3newbie" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                     <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>
                 </ul>
             </section>
             <section class="one-third" id=footer-third>

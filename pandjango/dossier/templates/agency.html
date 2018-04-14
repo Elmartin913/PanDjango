@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agency</title>
@@ -10,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- local -->
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'agency/main.css' %}">
+    <link rel="stylesheet" href="{% static 'agency/font-awesome-4.7.0/css/font-awesome.min.css' %}">
 </head>
 
 <body>
@@ -186,7 +187,7 @@
         <div class="portfolio-center">
             <!-- single work item -->
             <article class="work">
-                <img src="img/pexels-photo-121714.jpeg" alt="work" class="img-box">
+                <img src="{% static 'agency/img/pexels-photo-121714.jpeg' %}" alt="work" class="img-box">
                 <div class="image-overlay">
                     <div class="image-text">
                         <h3>job name</h3>
@@ -200,7 +201,7 @@
             <!-- end single work item -->
             <!-- single work item -->
             <article class="work">
-                <img src="img/pexels-photo-257904.jpeg" alt="work" class="img-box">
+                <img src="{% static 'agency/img/pexels-photo-257904.jpeg' %}" alt="work" class="img-box">
                 <div class="image-overlay">
                     <div class="image-text">
                         <h3>job name</h3>
@@ -214,7 +215,7 @@
             <!-- end single work item -->
             <!-- single work item -->
             <article class="work">
-                <img src="img/pexels-photo-274937.jpeg" alt="work" class="img-box">
+                <img src="{% static 'agency/img/pexels-photo-274937.jpeg' %}" alt="work" class="img-box">
                 <div class="image-overlay">
                     <div class="image-text">
                         <h3>job name</h3>
@@ -228,7 +229,7 @@
             <!-- end single work item -->
             <!-- single work item -->
             <article class="work">
-                <img src="img/pexels-photo-274977.jpeg" alt="work" class="img-box">
+                <img src="{% static 'agency/img/pexels-photo-274977.jpeg' %}" alt="work" class="img-box">
                 <div class="image-overlay">
                     <div class="image-text">
                         <h3>job name</h3>
@@ -242,7 +243,7 @@
             <!-- end single work item -->
             <!-- single work item -->
             <article class="work">
-                <img src="img/pexels-photo-302889.jpeg" alt="work" class="img-box">
+                <img src="{% static 'agency/img/pexels-photo-302889.jpeg' %}" alt="work" class="img-box">
                 <div class="image-overlay">
                     <div class="image-text">
                         <h3>job name</h3>
@@ -256,7 +257,7 @@
             <!-- end single work item -->
             <!-- single work item -->
             <article class="work">
-                <img src="img/pexels-photo-744318.jpeg" alt="work" class="img-box">
+                <img src="{% static 'agency/img/pexels-photo-744318.jpeg' %}" alt="work" class="img-box">
                 <div class="image-overlay">
                     <div class="image-text">
                         <h3>job name</h3>
@@ -317,7 +318,7 @@
         <div id="team-center">
             <!--team memer -->
             <article class="team-member">
-                <img src="img/member-1.jpeg" alt="team-member">
+                <img src="{% static 'agency/img/member-1.jpeg' %}" alt="team-member">
                 <div class="img-footer">
                     <div class="footer-info">
                         <h3>John Doe</h3>
@@ -335,7 +336,7 @@
             <!-- end of team memer -->
                         <!--team memer -->
             <article class="team-member">
-                <img src="img/member-22.jpeg" alt="team-member">
+                <img src="{% static 'agency/img/member-22.jpeg' %}" alt="team-member">
                 <div class="img-footer">
                     <div class="footer-info">
                         <h3>John Doe</h3>
@@ -353,7 +354,7 @@
             <!-- end of team memer -->
                         <!--team memer -->
             <article class="team-member">
-                <img src="img/member-3.jpeg" alt="team-member">
+                <img src="{% static 'agency/img/member-3.jpeg' %}" alt="team-member">
                 <div class="img-footer">
                     <div class="footer-info">
                         <h3>John Doe</h3>
@@ -371,7 +372,7 @@
             <!-- end of team memer -->
                         <!--team memer -->
             <article class="team-member">
-                <img src="img/member-44.jpeg" alt="team-member">
+                <img src="{% static 'agency/img/member-44.jpeg' %}" alt="team-member">
                 <div class="img-footer">
                     <div class="footer-info">
                         <h3>John Doe</h3>
@@ -401,7 +402,7 @@
         <div class="customers-center">
            <!--customer-->
             <article class="customer">
-                <img src="img/member-1.jpeg" alt="customer">
+                <img src="{% static 'agency/img/member-1.jpeg' %}" alt="customer">
                 <h3>John Doe</h3>
                 <h5>Web Developer</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque, quos rem distinctio sint deleniti?</p>
@@ -409,7 +410,7 @@
             <!--end of customer-->
                        <!--customer-->
             <article class="customer">
-                <img src="img/member-22.jpeg" alt="customer">
+                <img src="{% static 'agency/img/member-22.jpeg' %}" alt="customer">
                 <h3>John Doe</h3>
                 <h5>Web Developer</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque, quos rem distinctio sint deleniti?</p>
@@ -417,7 +418,7 @@
             <!--end of customer-->
             <!--customer-->
             <article class="customer">
-                <img src="img/member-3.jpeg" alt="customer">
+                <img src="{% static 'agency/img/member-3.jpeg' %}" alt="customer">
                 <h3>John Doe</h3>
                 <h5>Web Developer</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque, quos rem distinctio sint deleniti?</p>
@@ -467,7 +468,7 @@
     <!-- end of contact section -->
 
 
-    <script src="script.js"></script>
+    <script src="{% static 'agency/script.js' %}"></script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast</title>
@@ -9,9 +10,9 @@
     <!-- cnd -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- local -->
-    <link rel="stylesheet" href="main.css">
-    <script src="script.js"></script>
-    <script defer src="fontawesome-all.js"></script>
+    <link rel="stylesheet" href="{% static 'fast/main.css' %}">
+    <script src="{% static 'fast/script.js' %}"></script>
+    <script defer src="{% static 'fast/fontawesome-all.js' %}"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
    <header>
        <nav>
            <div class="nav-container">
-               <img src="img/logo.png" alt="img">
+               <img src="{% static 'fast/img/logo.png' %}" alt="img">
                <div class="btn">
                    <div class="bar"></div>
                    <div class="bar"></div>
@@ -37,7 +38,7 @@
        </nav>
        <div class="banner">
            <div class="banner-center">
-               <img src="img/logo.png" alt="">
+               <img src="{% static 'fast/img/logo.png' %}" alt="">
                 <h1>company <span class="and">&amp;</span></h1>
                 <h3>car shop for fanatics</h3>
                 <div class="banner-icons">
@@ -92,22 +93,22 @@
        <!-- end title -->
        <div class="projects-center">
            <article class="project">
-               <img src="img/car-lettering-design-auto-vote-163582.jpeg" alt="car">
+               <img src="{% static 'fast/img/car-lettering-design-auto-vote-163582.jpeg' %}" alt="car">
            </article>
             <article class="project">
-               <img src="img/traffic-car-vehicle-black.jpg" alt="car">
+               <img src="{% static 'fast/img/traffic-car-vehicle-black.jpg' %}" alt="car">
            </article>
             <article class="project">
-               <img src="img/pexels-photo-170811.jpeg" alt="car">
+               <img src="{% static 'fast/img/pexels-photo-170811.jpeg' %}" alt="car">
            </article>
             <article class="project">
-               <img src="img/pexels-photo-358070.jpeg" alt="car">
+               <img src="{% static 'fast/img/pexels-photo-358070.jpeg' %}" alt="car">
            </article>
             <article class="project">
-               <img src="img/pexels-photo-191238.jpeg" alt="car">
+               <img src="{% static 'fast/img/pexels-photo-191238.jpeg' %}" alt="car">
            </article>
             <article class="project">
-               <img src="img/mustang.jpeg" alt="car">
+               <img src="{% static 'fast/img/mustang.jpeg' %}" alt="car">
            </article>
        </div>
    </section>     
@@ -147,15 +148,6 @@
         </div>
         <p>Copyright&copy;Fast.All rights reserved</p>
     </footer>
-
-    
-   
-   
-   
-   
-   
-   
-
 
 </body>
 </html>

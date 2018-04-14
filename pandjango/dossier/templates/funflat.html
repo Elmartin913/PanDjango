@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    {% load static %}
     <title>Fun Flat Website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="scrolling.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="{% static 'funflat/scrolling.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'funflat/style.css' %}">
     <script type="text/javascript">
         $(document).on('click', '.navbar-collapse.in', function(e) {
             if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) {
@@ -31,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                    <a href="#" class="navbar-brand"><img src="img/logo2.png" alt="logo"></a>
+                    <a href="#" class="navbar-brand"><img src="{% static 'funflat/img/logo2.png' %}" alt="logo"></a>
                 </div>
                 <!--end of header -->
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -50,7 +51,7 @@
         <!--end nav -->
     </header>
     <div id="home">
-        <img src="img/desktop.png" alt="" class="banner">
+        <img src="{% static 'funflat/img/desktop.png' %}" alt="" class="banner">
     </div>
     <div id="about" class="container-fluid text-center">
         <h1>Welcome to my Website</h1>
@@ -61,7 +62,7 @@
                 <p>Cretating a website can be done in many ways. Many web hosting providers provide website building tools and software. This is the easiest method of buildings a website. Alternatively, you can use programs such as Wordpress and Drupal to create your website. It all depends on your comfort level.</p>
             </div>
             <div class="col-md-6">
-                <img src="img/code.png" alt="" id="code">
+                <img src="{% static 'funflat/img/code.png' %}" alt="" id="code">
             </div>
         </div>
         <!-- end of row -->
@@ -70,21 +71,21 @@
     </div>
     <!-- and of container -->
 
-    <img src="img/charts.png" alt="" class="banner">
+    <img src="{% static 'funflat/img/charts.png' %}" alt="" class="banner">
 
     <div id="features" class="container-fluid text-center">
         <h2>Get to know our Features</h2>
         <div class="row">
             <div class="col-sm-4">
-                <img src="img/html5.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/html5.png' %}" alt="" id="icon">
                 <h3>HTML5</h3>
             </div>
             <div class="col-sm-4">
-                <img src="img/bootstrap.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/bootstrap.png' %}" alt="" id="icon">
                 <h3>BOOTSTRAP</h3>
             </div>
             <div class="col-sm-4">
-                <img src="img/css3.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/css3.png' %}" alt="" id="icon">
                 <h3>CSS3</h3>
             </div>
         </div>
@@ -95,36 +96,36 @@
     </div>
     <!-- end of container -->
 
-    <img src="img/people.png" alt="" class="banner">
+    <img src="{% static 'funflat/img/people.png' %}" alt="" class="banner">
 
     <div id="portfolio" class="container-fluid text-center">
         <h2>Check out our Portfolio</h2>
         <br><br>
         <div class="row">
             <div class="col-md-4">
-                <img src="img/icons/camera.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/icons/camera.png' %}" alt="" id="icon">
             </div>
             <div class="col-md-4">
-                <img src="img/icons/mic.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/icons/mic.png' %}" alt="" id="icon">
             </div>
             <div class="col-md-4">
-                <img src="img/icons/phone.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/icons/phone.png' %}" alt="" id="icon">
             </div>
             <div class="col-md-4 hidden-sm hidden-xs">
-                <img src="img/icons/calendar.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/icons/calendar.png' %}" alt="" id="icon">
             </div>
             <div class="col-md-4 hidden-sm hidden-xs">
-                <img src="img/icons/tv.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/icons/tv.png' %}" alt="" id="icon">
             </div>
             <div class="col-md-4 hidden-sm hidden-xs">
-                <img src="img/icons/clock.png" alt="" id="icon">
+                <img src="{% static 'funflat/img/icons/clock.png' %}" alt="" id="icon">
             </div>
         </div>
         <!-- end of row -->
     </div>
     <!-- end of container -->
 
-    <img src="img/social.png" alt="" class="banner">
+    <img src="{% static 'funflat/img/social.png' %}" alt="" class="banner">
 
     <footer id="connect" class="container-fluid text-center">
         <div class="row">
