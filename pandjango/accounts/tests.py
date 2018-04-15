@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm
+
 from django.test import TestCase
 from django.urls import reverse, resolve
 
@@ -26,5 +26,7 @@ class SignUpTests(TestCase):
 
     def test_contains_form(self):
         form = self.response.context.get('form')
-        #print(vars(form))
-        self.assertIsInstance(form, UserCreationForm)
+        print(vars(form))
+        self.assertIsInstance(form, SignUpForm)
+
+

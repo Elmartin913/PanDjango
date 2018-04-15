@@ -48,7 +48,7 @@ body {
     justify-content: space-between;
 }
 
-.nav-container img {
+.nav-container a {
     align-self: center;
 }
 
@@ -111,6 +111,7 @@ nav {
         background-color: #a239ca;
     }
 }
+
 
 /* Title */
 

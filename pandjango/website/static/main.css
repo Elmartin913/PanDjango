@@ -55,7 +55,7 @@ body {
     justify-content: space-between;
 }
 
-.nav-container img {
+.nav-container a {
     align-self: center;
 }
 
@@ -92,7 +92,7 @@ nav {
 
 #banner {
     background: linear-gradient(rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2)), url(img/banner6.jpeg) center/cover no-repeat fixed;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 100%);
     display: flex;
     flex: 1 0 auto;
     justify-content: center;
@@ -186,6 +186,8 @@ nav {
     }
 }
 
+
+
 /* Title */
 
 .title {
@@ -212,6 +214,9 @@ nav {
 }
 
 /* Skills Section */
+#skill {
+    padding: 40px;
+}
 
 .skill-center {
     max-width: 90vw;
@@ -272,7 +277,7 @@ nav {
 
 #about {
     background: linear-gradient(rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2)), url(img/banner4.jpeg) center/cover no-repeat fixed;
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
 }
 
 #about .title-text {
@@ -323,12 +328,20 @@ span {
     .about-box {
         flex: 0 0 calc(50% - 2em);
     }
+    #about {
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    }
+}
+@media screen and (min-width:992px) {
+    #about {
+        clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    }
 }
 
 /* Portfoli Section */
 
 #projects {
-    padding: 20px;
+    padding: 40px;
 }
 
 .project-box {
@@ -387,14 +400,26 @@ span {
 
 
 /* Proposal Section */
+#proposals {
+    padding-top: 40px;
+}
+#proposals .title-text {
+    padding: 40px 0 0 0;
+}
 
 .proposal {
     background: linear-gradient(rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2)), url(img/keyboard1.jpeg) center/cover no-repeat fixed;
-    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
     padding: 75px 0;
     display: flex;
     text-align: center;
     justify-content: center;
+}
+
+@media screen and (min-width:576px) {
+    .proposal {
+        clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+    }
 }
 
 /* Footer Section */

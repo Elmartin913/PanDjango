@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.views import View
 from django.template.response import TemplateResponse
@@ -40,7 +41,7 @@ class ContactView(View):
         #return HttpResponseRedirect('')
 
 
-class BoardView(View):
+class BoardView(LoginRequiredMixin, View):
     def get(self, request):
         contacts = Contact.objects.all().order_by('-id')
         return render(request, 'board.html', {'contacts': contacts})

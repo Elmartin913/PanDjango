@@ -5,7 +5,12 @@
     <form method="post">
     {% csrf_token %}
     {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-success">Wyślij</button>
+
+        {% if send == 0 %}
+        <button type="submit" class="btn btn-success">Przekaż Brief</button>
+         {% else%}
+        <button type="submit" class="btn btn-success">Nowy brief</button>
+        {% endif %}
     </form>
 
 {% endblock content%}

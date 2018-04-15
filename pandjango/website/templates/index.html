@@ -20,7 +20,7 @@
     <header>
         <nav id="nav">
             <div class="nav-container">
-                <img src="{% static 'img/logo1.png' %}" alt="logo-nav">
+                <a href="{% url 'index' %}"><img src="{% static 'img/logo1.png' %}" alt="logo-nav"></a>
                 <div class="menu-btn">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -31,15 +31,14 @@
                 <li><a href="#skill">Start</a></li>
                 <li><a href="#about">O mnie</a></li>
                 <li><a href="#projects">Portfolio</a></li>
-                <!-- <li><a href="snipets">Notki</a></li> -->
-                <li><a href="#proposals">Kontakt</a></li>
+                <li><a href="{% url 'contact' %}">Kontakt</a></li>
             </ul>
         </nav>
         <!--banner -->
         <div id="banner">
             <div class="banner-text">
                 <h1>&nbsp;&nbsp;Pan Django</h1>
-                <!-- <h4>Marcin Jabłonowski</h4> 
+                <!-- <h4>Marcin Jabłonowski</h4>
                 <!-- Typing Animation -->
                 <h1 id="type-text">
                     <a href="" class="typewrite disabled" data-period="2000"
@@ -55,8 +54,9 @@
                     </a>
                 </h1>
                 <!-- End of Typing Animation -->
-                <a href="#home">Dowiedz się więcej</a>
+                <a href="#skill">Dowiedz się więcej</a>
             </div>
+
         </div>
     </header>
     <!-- Section Skills -->
@@ -131,17 +131,16 @@
                 <p>
                     <span>Marcin Jabłonowski</span>
                 </p>
-                <p>
-                    Jestem młodym programistą, z ogromną motywacją do pracy!
-                    Mam nadzieję, że przygotowana strona przekona Cię do skorzystania z moich usług.
-                    Wierzę, że razem możemy zrobić coś fajnego! 
-                </p>
+
                 <br>
                 <p>
                     Łaczę umiejętności front-endowca z umiejętnościami back-endowymi. Z jednej strony odpowiadam za to,
                     jak strona jest wyświetlana w oknie przeglądarki oraz za jej funkcje i intuicyjność z perspektywy
                     użytkownika. Z drugiej strony, dbam również o logikę działania aplikacji/strony, oraz
                     sposobu w jaki aplikacja pobiera dane z bazy czy np. uwierzytelnia użytkownika.
+                    Uwielbiam wszystko, co przejrzyste i intuicyjne.
+                    Tworzone przeze mnie strony i aplikacje charakteryzują się wykorzystaniem nowoczesnych
+                    technologii webowych, dostosowaniem do współczesnych standardów i potrzeb klienta.
                 </p>
                 <br>
                 <p>
@@ -150,23 +149,11 @@
                     sprzedażowe, tworzę akcje promocyjne.
                 </p>
                 <br>
-                <p>
-                    Tworzone przeze mnie strony i aplikacje charakteryzują się wykorzystaniem nowoczesnych
-                    technologii webowych, dostosowaniem do współczesnych standardów i potrzeb klienta.
-                    Przywiązuje szczególną wagę do RWD po to, by strona wyglądała doskonale nie tylko na dużym monitorze,
-                    ale też na ekranie smartfonu czy tabletu. Uwielbiam wszystko, co przejrzyste i intuicyjne.
-                    Moje projekty zawsze przygotowywane są z dbałością o każdy szczegół i zgodnie z aktualnymi
-                    trendami w dziedzinie webdesignu.
-                </p>
-                <br>
-                <p><span>Python / Django / Flask / Rest API / HTML / CSS / Bootstrap / JavaScript / JQuery</span></p>
-                <ul>
-                    <li><a href=""><i class="fab fa-github-square fa-2x"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin fa-2x"></i></a></li>
-                    <li><a href=""><i class="fas fa-envelope-square fa-2x"></i></a></li>
-                    <li><a href=""><i class="fas fa-phone-square fa-2x"></i></a></li>
 
-                </ul>
+                <p><span>Python / Django / Flask / Rest API / HTML / CSS / Bootstrap / JavaScript / JQuery</span></p>
+
+                <br><br><br>
+
             </article>
             <!-- skill -->
         </div>
@@ -189,16 +176,16 @@
                 <img src="{% static 'img/pic/PD.png' %}" alt="work-1">
                 <div class="img-footer">
                     <div class="footer-info">
-                        <h3>Pan Pjango</h3>
+                        <h3>PanPjango</h3>
                         <h5>Web Application</h5>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
                         </div>
                     </div>
-                    <a href="https://github.com/Elmartin913/PanDjango" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
+                    <a href="https://github.com/Elmartin913/PanDjango">
+                        <i class="fab fa-github-square fa-2x"></i>
+                            </a>
+                    <a href="https://github.com/Elmartin913/StudManPro2" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
                 </div>
             </article>
             <!-- end of team member -->
@@ -210,12 +197,12 @@
                         <h3>StudManPro</h3>
                         <h5>Web Application</h5>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
                         </div>
                     </div>
+                    <a href="https://github.com/Elmartin913/StudManPro2">
+                        <i class="fab fa-github-square fa-2x"></i>
+                    </a>
                     <a href="https://github.com/Elmartin913/StudManPro2" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
                 </div>
             </article>
@@ -228,13 +215,13 @@
                         <h3>FunFlat</h3>
                         <h5>Responsive Website</h5>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
                         </div>
                     </div>
-                    <a href="https://github.com/Elmartin913/websites/tree/master/funflat" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
+                    <a href="https://github.com/Elmartin913/websites/tree/master/funflat">
+                        <i class="fab fa-github-square fa-2x"></i>
+                    </a>
+                    <a href="{% url 'funflat' %}" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
                 </div>
             </article>
             <!-- end of team member -->
@@ -246,13 +233,16 @@
                         <h3>Banana</h3>
                         <h5>Responsive Website</h5>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
                         </div>
                     </div>
-                    <a href="https://github.com/Elmartin913/websites/tree/master/banana" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
+                    <a href="https://github.com/Elmartin913/websites/tree/master/banana">
+                        <i class="fab fa-github-square fa-2x"></i>
+                    </a>
+                    <a href="{% url 'banana' %}" class="footer-icon">
+                        <i class="fa fa-arrow-right fa-2x"></i>
+                    </a>
+
                 </div>
             </article>
             <!-- end of team member -->
@@ -264,13 +254,14 @@
                         <h3>Agency</h3>
                         <h5>Responsive Website</h5>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
+
                         </div>
                     </div>
-                    <a href="https://github.com/Elmartin913/websites/tree/master/agency" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
+                    <a href="https://github.com/Elmartin913/websites/tree/master/agency">
+                        <i class="fab fa-github-square fa-2x"></i>
+                    </a>
+                    <a href="{% url 'agency' %}" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
                 </div>
             </article>
             <!-- end of team member -->
@@ -282,13 +273,13 @@
                         <h3>Fast</h3>
                         <h5>Responsive Website</h5>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
                         </div>
                     </div>
-                    <a href="https://github.com/Elmartin913/websites/tree/master/fast" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
+                    <a href="https://github.com/Elmartin913/websites/tree/master/fast">
+                        <i class="fab fa-github-square fa-2x"></i>
+                    </a>
+                    <a href="{% url 'fast' %}" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
                 </div>
             </article>
             <!-- end of team member -->
@@ -298,15 +289,17 @@
                 <div class="img-footer">
                     <div class="footer-info">
                         <h3>The Gym</h3>
-                        <h5>Responsive Website</h5>
+                        <h5>Responsive Website
+                        </h5>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
+
                         </div>
                     </div>
-                    <a href="https://github.com/Elmartin913/websites/tree/master/standard" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
+                    <a href="https://github.com/Elmartin913/websites/tree/master/standard">
+                        <i class="fab fa-github-square fa-2x"></i>
+                    </a>
+                    <a href="{% url 'stand' %}" class="footer-icon"><i class="fa fa-arrow-right fa-2x"></i></a>
                 </div>
             </article>
             <!-- end of team member -->
@@ -330,7 +323,7 @@
                 <div class="title-underline"></div>
                 <p class="title-subheading">Skontaktuj się ze mną, aby uzyskać niezobowiązującą propozycję współpracy, na widok której chciwie się uśmiechniesz.</p>
 
-                <a href="#home">Skontaktuj się</a>
+                <a href="{% url 'contact' %}">Skontaktuj się</a>
 
             </div>
         </div>
@@ -342,12 +335,12 @@
     <footer id="footer">
         <div class="footer-center">
             <article class="footer-box">
-                <img src="{% static 'img/logo2.png' %}" alt="">
+                <img src="{% static 'img/logo1.png' %}" alt="">
                 <ul>
                     <li><a href="https://github.com/Elmartin913"><i class="fab fa-github-square fa-2x"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/marcin-jablonowski"><i class="fab fa-linkedin fa-2x"></i></a></li>
-                    <li><a href=""><i class="fas fa-envelope-square fa-2x"></i></a></li>
-                    <li><a href=""><i class="fas fa-phone-square fa-2x"></i></a></li>
+                    <li><a href="{% url 'contact' %}"><i class="fas fa-envelope-square fa-2x"></i></a></li>
+                    <li><a href="{% url 'contact' %}"><i class="fas fa-phone-square fa-2x"></i></a></li>
                 </ul>
 
             </article>
@@ -363,6 +356,7 @@
     <script src="{% static 'fontawesome-all.js' %}"></script>
     <script src="{% static 'script.js' %}"></script>
     <script src="{% static 'typing.js' %}"></script>
+
 </body>
 
 </html>

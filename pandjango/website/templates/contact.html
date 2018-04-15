@@ -20,16 +20,17 @@
     <header>
         <nav id="nav">
             <div class="nav-container">
-                <img src="{% static 'img/logo1.png' %}" alt="logo-nav">
+
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'img/logo1.png' %}" alt="logo-nav">
+                </a>
                 <div class="menu-btn">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
                 </div>
             </div>
-            <ul>
-                <li><a href="/">Start</a></li>
-            </ul>
+
         </nav>
         <!--banner -->
     </header>
@@ -63,10 +64,10 @@
                 <p></p>
                 <ol>
                     <li>
-                        <b>Mail: </b><a href="">marcin.jab@wp.pl</a>
+                        <b>Mail: </b><a href="">marcin.jab(a)wp.pl</a>
                     </li>
                     <li>
-                        <b>Tel: </b><a href=""> 793 979 913</a>
+                        <b>Tel: </b><a href=""> 793.979.913</a>
                     </li>  
                     <li>al.Solidarności 129/131 m.120</li>
                     <li>00-898 Warszawa</li>
@@ -74,9 +75,13 @@
             </article>
 
             <article class="skill">
-                <h3>Wypełnij brief współpracy
-                    {% if send == 0 %} NN {% endif %}
-
+                <h3>
+                    {% if send == 0 %}
+                    Wypełnij brief współpracy
+                    {% else %}
+                    Gratulacje. Brief przesłany.
+                    <i class="fas fa-check" style="color:green"></i>
+                    {% endif %}
                 </h3>
 
                 {% block content %}
@@ -93,12 +98,12 @@
     <footer id="footer">
         <div class="footer-center">
             <article class="footer-box">
-                <img src="{% static 'img/logo2.png'%}" alt="">
+                <img src="{% static 'img/logo1.png'%}" alt="">
                 <ul>
-                    <li><a href=""><i class="fab fa-github-square fa-2x"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin fa-2x"></i></a></li>
-                    <li><a href=""><i class="fas fa-envelope-square fa-2x"></i></a></li>
-                    <li><a href=""><i class="fas fa-phone-square fa-2x"></i></a></li>
+                    <li><a href="https://github.com/Elmartin913"><i class="fab fa-github-square fa-2x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/marcin-jablonowski"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                    <li><a href="{% url 'contact' %}"><i class="fas fa-envelope-square fa-2x"></i></a></li>
+                    <li><a href="{% url 'contact' %}"><i class="fas fa-phone-square fa-2x"></i></a></li>
                 </ul>
 
             </article>
