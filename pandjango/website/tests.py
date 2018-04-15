@@ -1,6 +1,6 @@
 import datetime
 
-from django.test import TestCase
+from django.test import TestCase, Client
 from django.urls import reverse, resolve
 from django.contrib.auth.models import User
 
@@ -8,6 +8,7 @@ from .views import (
     StartView, ContactView, BoardView
 )
 from .models import Contact
+from .forms import ContactForm
 
 # Create your tests here.
 
@@ -47,8 +48,9 @@ class BoardTests(TestCase):
         self.assertEquals(view.func.__name__, BoardView.as_view().__name__ )
 
 
-class NewContactTests(TestCase):
+class ContactFormTests(TestCase):
     def setUp(self):
+        self.client = Client()
         Contact.objects.create(
             name = 'Jan',
             message = 'Lorem ipsum',
@@ -66,25 +68,22 @@ class NewContactTests(TestCase):
         response = self.client.get(url)
         self.assertContains(response, 'csrfmiddlewaretoken')
 
-'''
-    def test_new_contact_valid_contact_data(self):
+
+    def test_contact_form_valid_form_data(self):
         url = reverse('contact')
         data = {
             'name': 'Jan',
             'message': 'Lorem ipsum',
-            'email': '',
-            'mobile': ''
+            'email': 'jan@o2.pl',
+            'mobile': '123123123',
         }
-        print(data)
+        form = ContactForm(data=data)
         response = self.client.post(url, data)
+        self.assertTrue(form.is_valid())
         self.assertTrue(Contact.objects.exists())
 
 
-    def test_new_contact_invalid_post_data_empty_fields(self):
-        
-        #Invalid post data should not redirect
-        #The expected behavior is to show the form again with validation errors
-        
+    def test_contact_form_invalid_data_empty_fields(self):
         url = reverse('contact')
         data = {
             'name': '',
@@ -92,9 +91,7 @@ class NewContactTests(TestCase):
             'email': '',
             'mobile': '',
         }
-        print(data)
+        form = ContactForm(data=data)
         response = self.client.post(url, data)
+        self.assertFalse(form.is_valid())
         self.assertEquals(response.status_code, 200)
-        self.assertFalse(Contact.objects.exists())
-
-'''
