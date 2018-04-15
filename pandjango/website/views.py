@@ -16,7 +16,7 @@ class StartView(View):
 class ContactView(View):
     def get(self,request):
         form = ContactForm()
-        return TemplateResponse(request, 'contact_form.html', {'form':form})
+        return render(request, 'contact_form.html', {'form':form, 'send': 0})
 
     def post(self, request):
         form = ContactForm(request.POST)
@@ -32,9 +32,12 @@ class ContactView(View):
                 email=email,
                 mobile=mobile,
             )
+            return render(request, 'contact_form.html', { 'send': 1})
 
-        return HttpResponseRedirect('contact')
+        #return HttpResponse('wiadomość nie zapisana')
+        return render(request, 'contact_form.html', {'form': form, 'send': 0})
 
+        #return HttpResponseRedirect('')
 
 
 class BoardView(View):

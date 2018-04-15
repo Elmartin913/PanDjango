@@ -74,7 +74,10 @@
             </article>
 
             <article class="skill">
-                <h3>Wypełnij brief współpracy</h3>
+                <h3>Wypełnij brief współpracy
+                    {% if send == 0 %} NN {% endif %}
+
+                </h3>
 
                 {% block content %}
                 {% endblock content%}

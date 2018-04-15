@@ -300,6 +300,8 @@ button:hover {
     background: #4717f6;
     border: 3px solid #0e0b16;
 }
+
 label{
-    visibility: hidden;
+    visibility: hidden
+
 }
