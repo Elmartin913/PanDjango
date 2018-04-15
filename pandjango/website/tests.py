@@ -3,7 +3,7 @@ import datetime
 from django.test import TestCase, Client
 from django.urls import reverse, resolve
 from django.contrib.auth.models import User
-
+from pprint import pprint
 from .views import (
     StartView, ContactView, BoardView
 )
@@ -95,3 +95,4 @@ class ContactFormTests(TestCase):
         response = self.client.post(url, data)
         self.assertFalse(form.is_valid())
         self.assertEquals(response.status_code, 200)
+
