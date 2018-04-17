@@ -17,10 +17,17 @@ Python/Django
 HTML/CSS/Bootstrap
 JS/JQuery
 
+Testy:
+- test formularza kontaktowego
+- test formularz zapisu
+- testy widoku
+- test url
+
 Dalsze plany:
 
 Dodanie statystyk na stronie startowej
 Możliwość subskrypcji
+Testy resetu hasła
 Integracja z systemem mailingowym (MailChimp)
 Możliwość wysyłanie SMS ze strony (Twilio)
 Dodanie bloga
