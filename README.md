@@ -25,6 +25,7 @@ Testy:
 
 Dalsze plany:
 
+Publikacji strony
 Dodanie statystyk na stronie startowej
 Możliwość subskrypcji
 Testy resetu hasła
