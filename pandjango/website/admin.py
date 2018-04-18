@@ -7,5 +7,8 @@ from .models import Contact
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['name', 'subject', 'message', 'email', 'mobile']
+    list_filter = ('time_add',)
+    search_fields = ('name', 'message')
+    ordering = ['name', 'email']
 
 
