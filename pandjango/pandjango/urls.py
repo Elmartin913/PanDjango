@@ -35,7 +35,7 @@ urlpatterns = [
     path('contact', ContactView.as_view(), name='contact'),
     path('board', BoardView.as_view(), name='board'),
     path('dossier/', include('dossier.urls'), name='dossier'),
-
+    path('blog/', include('blog.urls'), name='blog'),
     #acconts
     path('signup', signup, name='signup'),
     path('logout', LogoutView.as_view(), name='logout'),

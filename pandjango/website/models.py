@@ -38,7 +38,7 @@ class Contact(models.Model):
     message = models.TextField(max_length=4000, verbose_name='Wiadomość')
     email = models.CharField(max_length=70,blank=True, verbose_name='Email')
     mobile = models.CharField(max_length=9, blank=True, null=True,default='000000000', verbose_name='Telefon')
-    time_add = models.TimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = 'Wiadomość'
