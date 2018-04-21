@@ -22,7 +22,7 @@ class Topic(models.Model):
     def __str__(self):
         return self.subject
 
-
+'''
 class Post(models.Model):
     message = models.TextField(max_length=4000)
     topic = models.ForeignKey(Topic, related_name='posts', on_delete=models.CASCADE)
@@ -31,7 +31,7 @@ class Post(models.Model):
     created_by = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
     updated_by = models.ForeignKey(User, null=True, related_name='+', on_delete=models.CASCADE)
 
-
+'''
 class Contact(models.Model):
     name = models.CharField(max_length=128, null=True, verbose_name='Nadawca')
     subject = models.CharField(max_length=255, blank=True, verbose_name='Temat')

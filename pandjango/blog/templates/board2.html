@@ -41,30 +41,9 @@
 </nav>
     <div class="container">
       <ol class="breadcrumb my-4">
-        <li class="breadcrumb-item active">Boards</li>
+        <li class="breadcrumb-item active">{%block title%}{%endblock title%}</li>
       </ol>
-      <table class="table">
-        <thead class="thead-inverse">
-          <tr>
-            <th>Nadawca</th>
-              <th>Tytuł</th>
-            <th>Wiadomość</th>
-            <th>Telefon</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for contact in contacts %}
-            <tr>
-              <td>{{ contact.name }}<small class="text-muted d-block">{{ contact.time_add }}</small></td>
-                <td>{{ contact.subject }}</td>
-              <td>{{ contact.message }}</td>
-              <td >{{ contact.mobile }}</td>
-              <td>{{ contact.email }}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      {% block content %}{% endblock content %}
     </div>
   </body>
 </html>
