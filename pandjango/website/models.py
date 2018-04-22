@@ -47,3 +47,10 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Sms(models.Model):
+    name = models.CharField(max_length=16, null=True, verbose_name='Imię')
+    mobile = models.CharField(max_length=9, blank=True, null=True, verbose_name='Telefon')
+    message = models.TextField(max_length=124, verbose_name='Wiadomość')
+    created = models.DateTimeField(auto_now_add=True)

@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from django.shortcuts import reverse
+from django.utils.html import mark_safe
+
+from markdown import markdown
 
 # Create your models here.
 
@@ -34,3 +37,6 @@ class BlogPost(models.Model):
             self.publish.strftime('%d'),
             self.publish.slug,
         ])
+
+    def get_body_as_markdown(self):
+        return mark_safe(markdown(self.body, safe_mode='escape'))

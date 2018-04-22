@@ -3,7 +3,7 @@ from django.core.validators import validate_email
 from .validators import phone_validator
 
 
-from .models import Contact
+from .models import Contact, Sms
 
 class ContactForm(forms.ModelForm):
     name = forms.CharField(
@@ -31,3 +31,8 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = [ 'name', 'email', 'mobile', 'message']
+
+
+class SmsFormView(forms.ModelForm):
+    model = Sms
+    fields = ['name','mobile', 'message']

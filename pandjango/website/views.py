@@ -6,7 +6,7 @@ from django.views import View
 from django.template.response import TemplateResponse
 
 from .models import  Contact
-from .forms import ContactForm
+from .forms import ContactForm, SmsFormView
 # Create your views here.
 
 class StartView(View):
@@ -45,3 +45,7 @@ class BoardView(LoginRequiredMixin, View):
     def get(self, request):
         contacts = Contact.objects.all().order_by('-id')
         return render(request, 'board.html', {'contacts': contacts})
+
+
+class SmsFormView(View):
+    pass

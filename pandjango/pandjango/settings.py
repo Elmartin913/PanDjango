@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # external app
     'widget_tweaks',
     'twilio',
+    'markdown',
     #my apps
     'website',
     'accounts',
