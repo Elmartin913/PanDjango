@@ -50,8 +50,17 @@ class Contact(models.Model):
 
 
 class Sms(models.Model):
+    CHOICE = (
+        ('nietypowa_propozycja', 'Mam nie typową propozycje. Proszę o kontakt.'),
+        ('nawoczesna_firma', 'Chcę unowocześnić moją firmę.'),
+        ('start_up', 'Ma pomysł na start-up.'),
+        ('www', 'Potrzebuję strony internetowej.'),
+        ('promocja', 'Chcę przeprzowadzić akcję promocyjną.'),
+        ('kampania', 'Potrzebuję kampanii marketingowej.'),
+        ('reaktywacja', 'Chcę reaktywować moją listę mailingową.'),
+    )
     name = models.CharField(max_length=32, null=True, verbose_name='Imię')
     mobile = models.CharField(max_length=9, blank=True, null=True, verbose_name='Telefon')
-    body = models.CharField(max_length=140, verbose_name='Wiadomość')
+    body = models.CharField(choices=CHOICE, max_length=126, verbose_name='Wiadomość')
     sms_send = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
