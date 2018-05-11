@@ -2,10 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.shortcuts import reverse
 from django.utils.html import mark_safe
 
 from markdown import markdown
+=======
+>>>>>>> parent of d94c372... New Post View
 =======
 >>>>>>> parent of d94c372... New Post View
 
@@ -32,6 +35,7 @@ class Post(models.Model):
 
     def __str__(self):
 <<<<<<< HEAD
+<<<<<<< HEAD
         return self.title
 
     def get_absolute_url(self):
@@ -44,6 +48,9 @@ class Post(models.Model):
 
     def get_body_as_markdown(self):
         return mark_safe(markdown(self.body, safe_mode='escape'))
+=======
+        return self.title
+>>>>>>> parent of d94c372... New Post View
 =======
         return self.title
 >>>>>>> parent of d94c372... New Post View
