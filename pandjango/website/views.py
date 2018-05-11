@@ -5,9 +5,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
 from django.template.response import TemplateResponse
 
-from .models import  Contact, Sms
-from .forms import ContactForm, SmsForm
-from .send_sms import client
+from .models import  Contact
+from .forms import ContactForm, SmsFormView
 # Create your views here.
 
 class StartView(View):
@@ -49,33 +48,4 @@ class BoardView(LoginRequiredMixin, View):
 
 
 class SmsFormView(View):
-    def get(self, request):
-        form  = SmsForm
-        ctx = {'send':0, 'form': form}
-        return render(request, 'sms_form.html', ctx)
-
-    def post(self, request):
-        form = SmsForm(request.POST)
-        if form.is_valid():
-            body = form.cleaned_data['body']
-
-            name = form.cleaned_data['name']
-            mobile = form.cleaned_data['mobile']
-            Sms.objects.create(
-                name=name,
-                mobile=mobile,
-                body=body,
-                sms_send=True,
-            )
-            body2 = '{}-{}-{}'.format(name, mobile, body)
-
-            client.api.account.messages.create(
-                to="+48793979913",
-                from_="+48732168077",
-                body=body2,
-            )
-
-            return render(request, 'sms_form.html', {'send': 1})
-
-
-        return HttpResponse('Błąd formularza !')
+    pass
