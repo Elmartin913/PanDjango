@@ -44,10 +44,35 @@
 </nav>
     <div class="container">
       <ol class="breadcrumb my-4">
-        <li class="breadcrumb-item active">{%block title%}{%endblock title%}</li>
+        <li class="breadcrumb-item active">Boards</li>
       </ol>
+<<<<<<< HEAD:pandjango/blog/templates/board2.html
       {% block content %}
       {% endblock content %}
+=======
+      <table class="table">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Nadawca</th>
+              <th>Tytuł</th>
+            <th>Wiadomość</th>
+            <th>Telefon</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for contact in contacts %}
+            <tr>
+              <td>{{ contact.name }}<small class="text-muted d-block">{{ contact.time_add }}</small></td>
+                <td>{{ contact.subject }}</td>
+              <td>{{ contact.message }}</td>
+              <td >{{ contact.mobile }}</td>
+              <td>{{ contact.email }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+>>>>>>> parent of d94c372... New Post View:pandjango/blog/templates/board.html
     </div>
   <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
   {% block javascript %}

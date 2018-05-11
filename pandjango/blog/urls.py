@@ -1,9 +1,7 @@
-from django.urls import path
+from django.urls import path, include
 
-from .views import PostListView, PostView, NewPostFormView
+from .views import PostListView
 
 urlpatterns = [
     path('list', PostListView.as_view(), name='post_list'),
-    path('<int:pk>', PostView.as_view(), name='post_detail'),
-    path('new', NewPostFormView.as_view(), name='post_new'),
 ]

@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from .models import BlogPost
+from .models import Post
 
 # Register your models here.
 
 
-class BlogPostAdmin(admin.ModelAdmin):
+class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'slug', 'author', 'publish','status']
     list_filter = ('status', 'created', 'publish', 'author')
     ordering = ['status', 'publish']
@@ -15,4 +15,4 @@ class BlogPostAdmin(admin.ModelAdmin):
     raw_id_fields = ('author',)
 
 
-admin.site.register(BlogPost, BlogPostAdmin)
+admin.site.register(Post, PostAdmin)
